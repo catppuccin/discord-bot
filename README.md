@@ -12,8 +12,8 @@
 
 Some planned features include:
 
-- [ ] Economy system
-- [ ] Posting and moving rices to a separate channel (possibly add ability to upvote/downvote them?)
+-   [ ] Economy system: earn points for helping out ;)
+-   [ ] Rice: posting and moving rices to a separate channel (possibly add ability to upvote/downvote them?)
 
 ## Usage
 
@@ -21,9 +21,9 @@ Users can call the bot using ... command and ...
 
 ## 🙋 FAQ
 
-- Q: **_"Where can I find the doc?"_**
-  A: Run `:help theme`
+-   Q: **_"Where can I find the doc?"_**
+    A: Run `:help theme`
 
 ## 💝 Thanks to
 
-- [Human](https://github.com/catppuccin)
+-   [Human](https://github.com/catppuccin)
