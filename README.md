@@ -1,5 +1,5 @@
 <p align="center">
-  <h2 align="center">😸 Catppuccin Both</h2>
+  <h2 align="center">😸 Catppuccin Bot</h2>
 </p>
 
 <p align="center">The bot to rule them all!</p>
@@ -8,21 +8,32 @@
   <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/dev/assets/misc/sample.png"/>
 </p>
 
-## (WIP)
+## 🔨 (WIP)
 
 Some planned features include:
 
 -   [ ] Economy system: earn points for helping out ;)
--   [ ] Rice: posting and moving rices to a separate channel (possibly add ability to upvote/downvote them?)
+    -   [ ] Messages, reactions gives points
+    -   [ ] Posting a rice gives points
+    -   [ ] Games to spend points, tic-tac-toe, slots, dice
+    -   [ ] Profile command
+-   [ ] Rice: posting and moving rices to a separate channel 
+    -   [ ] Add ability to upvote/downvote them
+    -   [ ] Leaderboards for best rice
+    -   [ ] Moderation system to prevent any non-rice images
+-   [ ] Boring stuff like general and moderation commands and features
+    -   [ ] Help, links, and other information commands
+    -   [ ] Ban, unban, mute, unmute, kick, lock, unlock, clear commands
+    -   [ ] Basic anti-spam and filters
 
-## Usage
+## 📂 Usage
 
-Users can call the bot using ... command and ...
+Users can call the bot using slash commands and automatic features
 
-## 🙋 FAQ
+<!-- ## 🙋 FAQ
 
 -   Q: **_"Where can I find the doc?"_**
-    A: Run `:help theme`
+    A: Run `:help theme` -->
 
 ## 💝 Thanks to
 
