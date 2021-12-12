@@ -13,11 +13,29 @@ import YAML from '../../modules/yaml.js'
 export default (bot: Bot) => {
   bot.CreateCommand({
     name: 'ping',
-    description: 'Ping!',
+    description: 'Tests the latency of the bot.',
     permission: 'everyone',
     guilds: ['728269506710995034'],
-    execute(interaction: CommandInteraction) {
-      interaction.reply('Pong.')
+    async execute(interaction: CommandInteraction) {
+      const t1 = new Date()
+      await interaction.deferReply()
+      const t2 = new Date()
+      await interaction.editReply(Discord.Embed({
+        embed: {
+          title: 'Ping',
+          fields: [
+            {
+              name: 'Latency',
+              value: `${Math.round(t2.getMilliseconds() - t1.getMilliseconds())}ms`
+            },
+            {
+              name: 'Heartbeat',
+              value: `${Math.round(bot.client.ws.ping)}ms`
+            }
+          ],
+          color: 0xA4B9EF
+        }
+      }))
     }
   })
 }
