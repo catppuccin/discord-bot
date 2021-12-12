@@ -8,6 +8,13 @@
   <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/dev/assets/misc/sample.png"/>
 </p>
 
+## (WIP)
+
+Some planned features include:
+
+- [ ] Economy system
+- [ ] Posting and moving rices to a separate channel (possibly add ability to upvote/downvote them?)
+
 ## Usage
 
 Users can call the bot using ... command and ...
