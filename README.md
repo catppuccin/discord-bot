@@ -22,9 +22,10 @@ Some planned features include:
     -   [ ] Leaderboards for best rice
     -   [ ] Moderation system to prevent any non-rice images
 -   [ ] Boring stuff like general and moderation commands and features
-    -   [ ] Help, links, and other information commands
+    -   [x] Help, links, and other information commands
     -   [ ] Ban, unban, mute, unmute, kick, lock, unlock, clear commands
     -   [ ] Basic anti-spam and filters
+    -   [x] Welcomer
 
 ## 📂 Usage
 
