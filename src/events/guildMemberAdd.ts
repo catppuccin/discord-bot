@@ -16,9 +16,9 @@ export default (bot: Bot) => {
   bot.CreateEvent({
     name: 'guildMemberAdd',
     execute(client: Client, member: GuildMember) {
-      const channel = member.guild.channels.cache.get('883049414808203265') // welcome channel
+      const channel = member.guild.channels.cache.get('728615111199293470') // welcome channel
 
-      member.roles.add('883052187293474836') // role
+      member.roles.add('728334551012606024') // role
 
       ;(channel as TextChannel).send(Discord.Embed({
         embed: {

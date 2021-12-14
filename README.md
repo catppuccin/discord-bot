@@ -23,9 +23,11 @@ Some planned features include:
     -   [ ] Moderation system to prevent any non-rice images
 -   [ ] Boring stuff like general and moderation commands and features
     -   [x] Help, links, and other information commands
-    -   [ ] Ban, unban, mute, unmute, kick, lock, unlock, clear commands
+    -   [x] Ban, unban, mute, unmute, kick, lock, unlock, clear commands
     -   [ ] Basic anti-spam and filters
     -   [x] Welcomer
+-   [ ] Announcer for when a new port is out
+-   [ ] Future: a rep system
 
 ## 📂 Usage
 
