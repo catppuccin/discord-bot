@@ -24,7 +24,7 @@ export default (bot: Bot) => {
         message.channel.send(Discord.Embed({
           embed: {
             title: `${message.author.tag} used profanity!`,
-            description: cleaned.replace(/\*/g, '\\*'), // fix character limits!
+            description: cleaned.replace(/\*/g, '\\*'),
             color: 0xA4B9EF
           }
         }))

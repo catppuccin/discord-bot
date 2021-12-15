@@ -26,7 +26,7 @@ Some planned features include:
     -   [x] Ban, unban, mute, unmute, kick, lock, unlock, clear commands
     -   [x] Basic anti-spam (maybe) and filters
     -   [x] Welcomer
--   [ ] Announcer for when a new port is out
+-   [x] Announcer for when a new port is out -- /post
 -   [ ] Future: a rep system
 
 ## 📂 Usage

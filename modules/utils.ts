@@ -9,6 +9,7 @@ export default class Utils {
   static db: Sequelize = new Sequelize({
     storage: 'database.db',
     dialect: 'sqlite',
+    logging: false
   })
 
   static PadWithZeros(number: number, length = 4): string {

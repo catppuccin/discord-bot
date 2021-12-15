@@ -10,6 +10,31 @@ import Log from '../../modules/loggers.js'
 import Discord from '../../modules/discord.js'
 import YAML from '../../modules/yaml.js'
 
+import {Github} from '../../models/github.js'
+
+const getGithubData = async () => {
+  const api = got('https://api.github.com/orgs/catppuccin/repos')
+
+  const data: any[] = await api.json()
+
+  await Utils.db.sync()
+
+  await Github.destroy({ truncate: true })
+
+  for (const repo of data) {
+    await Github.create({
+      name: repo.name,
+      full_name: repo.full_name,
+      link: repo.html_url,
+      stars: repo.stargazers_count,
+      forks: repo.forks_count,
+      issues: repo.open_issues
+    })
+  }
+
+  //await db.close()
+}
+
 export default (bot: Bot) => {
   bot.CreateEvent({
     name: 'ready',
@@ -26,6 +51,11 @@ export default (bot: Bot) => {
       setInterval(() => {
         Utils.Backup('database.db')
       }, (1000 * 60 * 60 * 24))
+    
+      getGithubData()
+      setInterval(() => {
+        getGithubData()
+      }, (1000 * 60 * 60))
 
       ;(async () => {
         if (!client.application?.owner) await client.application?.fetch()
