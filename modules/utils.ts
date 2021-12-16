@@ -5,12 +5,26 @@ import Log from './loggers.js'
 
 import { Time } from '../global'
 
+//import {Member} from '../models/member.js'
 export default class Utils {
   static db: Sequelize = new Sequelize({
     storage: 'database.db',
     dialect: 'sqlite',
     logging: false
   })
+
+  static async generateMember(discord: String) {
+    const { Member } = await import('../models/member.js')
+
+    this.db.sync()
+    Member.create({
+      discord: discord,
+      points: 0,
+      wins: 0,
+      losses: 0,
+      reps: 0,
+    })
+  }
 
   static PadWithZeros(number: number, length = 4): string {
     let n = '' + number

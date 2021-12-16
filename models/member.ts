@@ -1,5 +1,5 @@
 import Sequelize from "sequelize"
-const { Model, DataTypes } = Sequelize
+const { DataTypes } = Sequelize
 import Utils from "../modules/utils.js"
 
 // export default class Member extends Model {}
@@ -14,11 +14,12 @@ import Utils from "../modules/utils.js"
 //   modelName: 'member' 
 // })
 
-export const Github = Utils.db.define('member', {
-  id: DataTypes.STRING,
+export const Member = Utils.db.define('member', {
+  discord: DataTypes.STRING,
   points: DataTypes.NUMBER,
   wins: DataTypes.NUMBER,
-  losses: DataTypes.NUMBER
+  losses: DataTypes.NUMBER,
+  reps: DataTypes.NUMBER,
 })
 
 //db.close()

@@ -1,5 +1,5 @@
 import Sequelize from "sequelize"
-const { Model, DataTypes } = Sequelize
+const { DataTypes } = Sequelize
 import Utils from "../modules/utils.js"
 
 // export default class Github extends Model {}

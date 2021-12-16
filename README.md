@@ -16,7 +16,7 @@ Some planned features include:
     -   [ ] Messages, reactions gives points
     -   [ ] Posting a rice gives points
     -   [ ] Games to spend points, tic-tac-toe, slots, dice
-    -   [ ] Profile command
+    -   [x] Profile command
 -   [ ] Rice: posting and moving rices to a separate channel 
     -   [ ] Add ability to upvote/downvote them
     -   [ ] Leaderboards for best rice
