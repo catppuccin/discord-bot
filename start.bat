@@ -1,4 +1,4 @@
 @echo off
-title DiscordJS Template
+title Catppuccin
 npm i
 npm run start

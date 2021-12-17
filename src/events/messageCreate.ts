@@ -11,10 +11,12 @@ import Log from '../../modules/loggers.js'
 import Discord from '../../modules/discord.js'
 import YAML from '../../modules/yaml.js'
 
+import { Member } from '../../models/member.js'
+
 export default (bot: Bot) => {
   bot.CreateEvent({
     name: 'messageCreate',
-    execute(client: Client, message: Message) {
+    async execute(client: Client, message: Message) {
       // profanity filter
       const filter = new Filter();
 
@@ -31,6 +33,16 @@ export default (bot: Bot) => {
 
         message.delete()
       }
+
+      let memberDB = await Member.findOne({ where: { discord: message.member.id } })
+
+      if (memberDB == null) {
+        await Utils.generateMember(message.member.id)
+      }
+
+      memberDB = await Member.findOne({ where: { discord: message.member.id } })
+
+      memberDB.increment('points', { by: 5 })
 
     }
   })

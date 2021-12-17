@@ -13,7 +13,7 @@
 Some planned features include:
 
 -   [ ] Economy system: earn points for helping out ;)
-    -   [ ] Messages, reactions gives points
+    -   [x] Messages, reactions gives points
     -   [ ] Posting a rice gives points
     -   [ ] Games to spend points, tic-tac-toe, slots, dice
     -   [x] Profile command
