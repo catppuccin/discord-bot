@@ -15,9 +15,10 @@ Some planned features include:
 -   [ ] Economy system: earn points for helping out ;)
     -   [x] Messages, reactions gives points
     -   [ ] Posting a rice gives points
-    -   [ ] Games to spend points, slots, dice
+    -   [ ] Future: Games to spend points, slots, dice
+    -   [x] give points command
     -   [x] Profile command
--   [ ] Rice: posting and moving rices to a separate channel 
+-   [ ] Rice: posting and moving rices to a separate channel  -- /rice 
     -   [ ] Add ability to upvote/downvote them
     -   [ ] Leaderboards for best rice
     -   [ ] Moderation system to prevent any non-rice images
@@ -28,6 +29,8 @@ Some planned features include:
     -   [x] Welcomer
 -   [x] Announcer for when a new port is out -- /post
 -   [ ] Future: a rep system
+-   [ ] A make contributor command
+-   [ ] discord ids to configs!
 
 ## 📂 Usage
 
