@@ -31,8 +31,6 @@ const getGithubData = async () => {
       issues: repo.open_issues
     })
   }
-
-  //await db.close()
 }
 
 export default (bot: Bot) => {

@@ -25,7 +25,7 @@ const client = new Discordjs.Client({ partials: ['MESSAGE', 'CHANNEL', 'REACTION
   // Discordjs.Intents.FLAGS.GUILD_WEBHOOKS,
 ] })
 
-YAML.Generate('config', {  // bot.configs.config.discordIds
+YAML.Generate('config', { // bot.configs.config.discordIds
   discordIds: {
     guild: '728269506710995034',
     role: {
