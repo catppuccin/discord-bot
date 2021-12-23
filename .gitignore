@@ -1,0 +1,12 @@
+backups
+logs
+node_modules
+dist
+
+*.env
+*.yaml
+*.sqlite
+*.db
+*.ignore.txt
+
+errors.txt
