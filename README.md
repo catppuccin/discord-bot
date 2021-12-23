@@ -29,7 +29,7 @@ Some planned features include:
     -   [x] Welcomer
 -   [x] Announcer for when a new port is out -- /post
 -   [ ] Future: a rep system
--   [ ] A make contributor command
+-   [x] A make contributor command
 -   [ ] discord ids to configs!
 
 ## 📂 Usage
