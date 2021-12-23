@@ -1,4 +1,4 @@
-import { ApplicationCommandOptionData, Client, CommandInteraction, MessageAttachment } from 'discord.js'
+import { ApplicationCommandOptionData, BaseMessageComponentOptions, Client, CommandInteraction, MessageActionRow, MessageActionRowOptions, MessageAttachment } from 'discord.js'
 
 declare type CommandObject = {
   name: string
@@ -52,8 +52,9 @@ declare interface Embed {
 
 declare interface Message {
   embed: Embed
-  content?: string | number
+  content?: string
   files?: MessageAttachment[]
+  components?: (MessageActionRow | (Required<BaseMessageComponentOptions> & MessageActionRowOptions))[]
 }
 
 declare interface Time {

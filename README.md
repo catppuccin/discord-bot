@@ -12,16 +12,16 @@
 
 Some planned features include:
 
--   [ ] Economy system: earn points for helping out ;)
+-   [x] Economy system: earn points for helping out ;)
     -   [x] Messages, reactions gives points
-    -   [ ] Posting a rice gives points
+    -   [x] Posting a rice gives points
     -   [ ] Future: Games to spend points, slots, dice
     -   [x] give points command
     -   [x] Profile command
--   [ ] Rice: posting and moving rices to a separate channel  -- /rice 
-    -   [ ] Add ability to upvote/downvote them
-    -   [ ] Leaderboards for best rice
-    -   [ ] Moderation system to prevent any non-rice images
+-   [x] Rice: posting and moving rices to a separate channel  -- /rice 
+    -   [x] Add ability to upvote/downvote them
+    -   [ ] Future: Leaderboards for best rice
+    -   [x] Moderation system to prevent any non-rice images
 -   [x] Boring stuff like general and moderation commands and features
     -   [x] Help, links, and other information commands
     -   [x] Ban, unban, mute, unmute, kick, lock, unlock, clear commands

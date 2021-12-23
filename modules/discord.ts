@@ -9,7 +9,8 @@ export default class Discord {
     return {
       embeds: [embed],
       content: Message.content,
-      files: Message.files
+      files: Message.files,
+      components: Message.components
     } as MessageOptions
   }
 
