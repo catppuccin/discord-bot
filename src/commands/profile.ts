@@ -17,7 +17,7 @@ export default (bot: Bot) => {
     name: 'profile',
     description: 'Sends the profile of a specific user.',
     permission: 'everyone',
-    guilds: ['728269506710995034'],    
+    guilds: [bot.configs.config.discordIds.guild],    
     options: [
       {
         name: 'member',

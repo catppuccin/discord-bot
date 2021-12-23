@@ -15,7 +15,7 @@ export default (bot: Bot) => {
     name: 'help',
     description: 'Sends the help menu for the bot and the project.',
     permission: 'everyone',
-    guilds: ['728269506710995034'],
+    guilds: [bot.configs.config.discordIds.guild],
     async execute(interaction: CommandInteraction) {
       await interaction.deferReply()
       await interaction.editReply(Discord.Embed({

@@ -30,7 +30,7 @@ export default (bot: Bot) => {
       },
     ],
     permission: 'everyone',
-    guilds: ['728269506710995034'],
+    guilds: [bot.configs.config.discordIds.guild],
     async execute(interaction: CommandInteraction) {
       const amount = interaction.options.getNumber('amount')
       const guess = interaction.options.getString('guess').toLowerCase()[0]

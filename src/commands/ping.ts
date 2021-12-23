@@ -15,7 +15,7 @@ export default (bot: Bot) => {
     name: 'ping',
     description: 'Tests the latency of the bot.',
     permission: 'everyone',
-    guilds: ['728269506710995034'],
+    guilds: [bot.configs.config.discordIds.guild],
     async execute(interaction: CommandInteraction) {
       const t1 = new Date()
       await interaction.deferReply()

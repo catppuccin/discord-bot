@@ -14,12 +14,12 @@ export default (bot: Bot) => {
   bot.CreateCommand({
     name: 'unlock',
     description: 'Unlocks a specific channel.',
-    permission: '759423014243794944',
-    guilds: ['728269506710995034'],
+    permission: bot.configs.config.discordIds.role.moderator,
+    guilds: [bot.configs.config.discordIds.guild],
     execute(interaction: CommandInteraction) { 
     ;(interaction.channel as TextChannel)
     .permissionOverwrites.create((interaction.channel as TextChannel)
-    .guild.roles.cache.get('728334551012606024'), { SEND_MESSAGES: true }).then(x => { // member role
+    .guild.roles.cache.get(bot.configs.config.discordIds.role.member), { SEND_MESSAGES: true }).then(x => { // member role
       interaction.reply(Discord.Embed({
         embed: {
           title: 'Successfully locked the channel',

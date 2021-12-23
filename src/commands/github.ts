@@ -22,20 +22,13 @@ export default (bot: Bot) => {
     name: 'github',
     description: 'Sends a link to the github account.',
     permission: 'everyone',
-    guilds: ['728269506710995034'],
+    guilds: [bot.configs.config.discordIds.guild],
     async execute(interaction: CommandInteraction) {
       await interaction.deferReply()
 
       await Utils.db.sync()
 
-      //await Utils.db.close()
-
-      // const api = got('https://api.github.com/orgs/catppuccin/repos') // TODO, create a system to automatically call this url every hour and store it into the database, ensuring that we dont hit any api limits
-
-      // const data: any[] = await api.json()
       const data: any[] = (await Github.findAll()).map(repo => repo.toJSON())
-
-      //console.log(data)
 
       const main = data.filter(repo => repo.full_name === 'catppuccin/catppuccin')[0]
 

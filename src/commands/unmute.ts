@@ -22,12 +22,12 @@ export default (bot: Bot) => {
         required: true,
       },
     ],
-    permission: '759423014243794944',
-    guilds: ['728269506710995034'],
+    permission: bot.configs.config.discordIds.role.moderator,
+    guilds: [bot.configs.config.discordIds.guild],
     execute(interaction: CommandInteraction) {
       const user = interaction.options.getMember('user') as GuildMember
 
-      user.roles.remove('736309676765085747').then(x => { // muted role
+      user.roles.remove(bot.configs.config.discordIds.role.mute).then(x => { // muted role
         interaction.reply(Discord.Embed({
           embed: {
             title: 'Successfully unmuted the user',

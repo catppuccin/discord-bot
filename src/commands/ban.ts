@@ -34,8 +34,8 @@ export default (bot: Bot) => {
         required: false
       },
     ],
-    permission: '759423014243794944',
-    guilds: ['728269506710995034'],
+    permission: bot.configs.config.discordIds.role.moderator,
+    guilds: [bot.configs.config.discordIds.guild],
     async execute(interaction: CommandInteraction) {      
       const user = interaction.options.getMember('user') as GuildMember
       const reason = interaction.options.getString('reason') || null

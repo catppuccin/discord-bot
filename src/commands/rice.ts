@@ -37,7 +37,7 @@ export default (bot: Bot) => {
       },
     ],
     permission: 'everyone',
-    guilds: ['728269506710995034'],
+    guilds: [bot.configs.config.discordIds.guild],
     async execute(interaction: CommandInteraction) {      
       const title = interaction.options.getString('title')
       const dewm = interaction.options.getString('dewm')
@@ -61,7 +61,7 @@ export default (bot: Bot) => {
         message: ''
       })
 
-      ;(interaction.guild.channels.cache.find(gc => gc.id === '923321447714263070') as TextChannel).send(Discord.Embed({
+      ;(interaction.guild.channels.cache.find(gc => gc.id === bot.configs.config.discordIds.channel.riceVerification) as TextChannel).send(Discord.Embed({
         embed: {
           title: 'A new rice needs to be reviewed!',
           fields: [
@@ -152,7 +152,7 @@ export default (bot: Bot) => {
           components: []
         }))
 
-        ;(interaction.guild.channels.cache.find(f => f.id === '923321531583561838') as TextChannel).send(Discord.Embed({
+        ;(interaction.guild.channels.cache.find(f => f.id === bot.configs.config.discordIds.channel.rice) as TextChannel).send(Discord.Embed({
           embed: {
             title: r.title,
             fields: [

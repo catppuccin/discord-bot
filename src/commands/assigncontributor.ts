@@ -22,12 +22,12 @@ export default (bot: Bot) => {
         required: true
       },
     ],
-    permission: '759423014243794944',
-    guilds: ['728269506710995034'],
+    permission: bot.configs.config.discordIds.role.moderator,
+    guilds: [bot.configs.config.discordIds.guild],
     async execute(interaction: CommandInteraction) {      
       const user = interaction.options.getMember('user') as GuildMember
       
-      user.roles.add(interaction.guild.roles.cache.find(f => f.id === '852313820177104936'))
+      user.roles.add(interaction.guild.roles.cache.find(f => f.id === bot.configs.config.discordIds.role.contributor))
 
       interaction.reply(Discord.Embed({
         embed: {

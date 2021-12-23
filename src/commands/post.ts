@@ -40,8 +40,8 @@ export default (bot: Bot) => {
         required: false,
       },
     ],
-    permission: '728311845298896958',
-    guilds: ['728269506710995034'],
+    permission: bot.configs.config.discordIds.role.admin,
+    guilds: [bot.configs.config.discordIds.guild],
     async execute(interaction: CommandInteraction) {
       const link = interaction.options.getString('link')
       const title = interaction.options.getString('title')
