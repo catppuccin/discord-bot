@@ -13,6 +13,7 @@
 
 
 Based on [DiscordX](https://github.com/oceanroleplay/discord.ts) for typescript support with [Discord.js](https://github.com/discordjs/discord.js) as the underlying architechture.
+Please refer to the Docs or [oceanroleplay/discordx-templates](https://github.com/oceanroleplay/discordx-templates) for examples.
 
 **Important commands**<br>
 `npm run build` – compile with TSC<br>
