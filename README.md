@@ -1,7 +1,7 @@
 <h3 align="center">
 	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png" width="100" alt="Logo"/><br/>
 	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="30" width="0px"/>
-	Catppuccin for <a href="https://github.com/catppuccin/template">App</a>
+	Catppuccin Discord Bot
 	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="30" width="0px"/>
 </h3>
 
@@ -18,18 +18,20 @@
 ## Usage
 
 1. Clone this repository locally
-2. Open the app's settings
-3. Select `import theme` and browse to where you cloned Catppuccin
-4. Select it
+2. Run `npm start` to start a test server, or run `npm build` to build a production ready bot.
 
+<!--
 ## 🙋 FAQ (optional)
+-->
 
--	Q: **_"Where can I find the doc?"_**
-	A: Run `:help theme`
+
 
 ## 💝 Thanks to
 
-- [Human](https://github.com/catppuccin)
+- [@Pocco81] (https://github.com/Pocco81)
+- [Nick - @N-F9] (https://github.com/N-F9)
+- [Andreas Grafen - @andreasgrafen] (https://github.com/andreasgrafen)
+- [BlueFalconHD] (https://github.com/bluefalconhd)
 
 &nbsp;
 
