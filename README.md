@@ -22,6 +22,14 @@ Based on [DiscordX](https://github.com/oceanroleplay/discord.ts) for typescript 
 For development please use your own App-Instance. You can create one in [Discord's Developer Portal](https://discord.com/developers/applications).
 
 
+## 💝 Thanks to
+
+- [Pocco81] (https://github.com/Pocco81)
+- [Nick] (https://github.com/N-F9)
+- [Dukk] (https://github.com/DakshG07)
+- [Andreas Grafen] (https://github.com/andreasgrafen)
+- [BlueFalconHD] (https://github.com/bluefalconhd)
+
 &nbsp;
 
 <p align="center">
