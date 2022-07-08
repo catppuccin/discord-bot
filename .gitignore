@@ -1,0 +1,11 @@
+# files
+.vscode
+.env
+.env.local
+package-lock.json
+yarn.lock
+bot_config.js
+
+# folders
+build
+node_modules
