@@ -1,0 +1,49 @@
+{
+	"name": "catppuccin-pepperjack",
+	"version": "1.0.0",
+	"author": "Catppuccin",
+	"description": "Utility Discord bot for the Catppucin server.",
+	"keywords": [
+		"catppuccin",
+		"discord",
+		"utility",
+		"bot"
+	],
+	"license": "MIT",
+	"type": "module",
+	"private": true,
+	"main": "build/main.js",
+	"scripts": {
+		"build": "tsc",
+		"build:changelog": "npx @discordx/changelog --root=src",
+		"dev": "node --loader ts-node/esm/transpile-only src/main.ts",
+		"serve": "node build/main.js",
+		"start": "nodemon --exec node --loader ts-node/esm/transpile-only src/main.ts"
+	},
+	"dependencies": {
+		"@discordx/importer": "^1.1.9",
+		"@discordx/pagination": "^2.1.2",
+		"discord-api-types": "^0.30.0",
+		"discord.js": "^13.7.0",
+		"discordx": "^9.6.0",
+		"reflect-metadata": "^0.1.13"
+	},
+	"devDependencies": {
+		"@types/node": "^17.0.33",
+		"nodemon": "^2.0.16",
+		"ts-node": "^10.7.0",
+		"typescript": "^4.6.4"
+	},
+	"engines": {
+		"node": ">=16.0.0",
+		"npm": ">=7.0.0"
+	},
+	"repository": {
+	"type": "git",
+		"url": "git+https://github.com/catppuccin/discord-bot.git"
+	},
+	"bugs": {
+		"url": "https://github.com/catppuccin/discord-bot/issues"
+	},
+	"homepage": "https://github.com/catppuccin/discord-bot#readme"
+}

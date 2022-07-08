@@ -1,7 +1,7 @@
 <h3 align="center">
 	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png" width="100" alt="Logo"/><br/>
 	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="30" width="0px"/>
-	Catppuccin Discord Bot
+	<a href="https://github.com/catppuccin/discord-bot">Utility-Bot</a> for the Catppuccin Discord server
 	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="30" width="0px"/>
 </h3>
 
@@ -11,26 +11,23 @@
 	<a href="https://github.com/catppuccin/discord-bot/contributors"><img src="https://img.shields.io/github/contributors/catppuccin/discord-bot?colorA=363a4f&colorB=a6da95&style=for-the-badge"></a>
 </p>
 
-<p align="center">
-	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/sample.png"/>
-</p>
 
-## Usage
+Based on [DiscordX](https://github.com/oceanroleplay/discord.ts) for typescript support with [Discord.js](https://github.com/discordjs/discord.js) as the underlying architechture.
 
-1. Clone this repository locally
-2. Run `npm start` to start a test server, or run `npm build` to build a production ready bot.
+**Important commands**<br>
+`npm run build` – compile with TSC<br>
+`npm run serve` – serve the compiled code<br>
+`npm run start` – run nodemon with the uncompiled code for cevelopment<br>
 
-<!--
-## 🙋 FAQ (optional)
--->
-
+For development please use your own App-Instance. You can create one in [Discord's Developer Portal](https://discord.com/developers/applications).
 
 
 ## 💝 Thanks to
 
-- [@Pocco81] (https://github.com/Pocco81)
-- [Nick - @N-F9] (https://github.com/N-F9)
-- [Andreas Grafen - @andreasgrafen] (https://github.com/andreasgrafen)
+- [Pocco81] (https://github.com/Pocco81)
+- [Nick] (https://github.com/N-F9)
+- [Dukk] (https://github.com/DakshG07)
+- [Andreas Grafen] (https://github.com/andreasgrafen)
 - [BlueFalconHD] (https://github.com/bluefalconhd)
 
 &nbsp;

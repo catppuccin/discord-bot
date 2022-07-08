@@ -1,0 +1,13 @@
+export const token = ACCESS TOKEN
+
+export const autoThreadWhitelist = [ARRAY OF AUTO THREAD CHANNEL IDS]
+export const permissionWhitelist = [ARRAY OF USER IDS THAT HAVE ADMIN PERMS]
+
+export const logChannel = LOG CHANNEL ID
+
+export const threadHelpMessage = `
+**Hey {{ author }}**,
+I've created a new thread specifically for your message. Please continue any relevant conversation in here.
+`
+
+export const errorMessage = 'Something went wrong here.. Please try again.'
