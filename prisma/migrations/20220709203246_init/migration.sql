@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "Channel" ADD COLUMN     "cid" INTEGER NOT NULL DEFAULT 0;

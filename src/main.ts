@@ -7,6 +7,23 @@ import { Client } from "discordx";
 
 // @ts-ignore-error
 import { token } from "../bot_config.js";
+import { PrismaClient } from '@prisma/client'
+
+const prisma = new PrismaClient()
+
+async function test_query() {
+	await prisma.channel.create({
+		data: {
+			id: 1,
+			cid: 995416801582252075,
+			hthresh: 10,
+			horni: true,
+			autothread: false,
+		}
+	})
+	const allChannels = await prisma.channel.findMany()
+	console.log(allChannels)
+}
 
 export const bot = new Client({
 	botGuilds: [(client) => client.guilds.cache.map((guild) => guild.id)],
@@ -44,4 +61,5 @@ async function run() {
 	await bot.login(token);
 }
 
-run();
+//run();
+test_query();
