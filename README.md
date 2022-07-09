@@ -11,18 +11,21 @@
 	<a href="https://github.com/catppuccin/discord-bot/contributors"><img src="https://img.shields.io/github/contributors/catppuccin/discord-bot?colorA=363a4f&colorB=a6da95&style=for-the-badge"></a>
 </p>
 
+&nbsp;
+
+## About
 
 Based on [DiscordX](https://github.com/oceanroleplay/discord.ts) for typescript support with [Discord.js](https://github.com/discordjs/discord.js) as the underlying architechture.
-Please refer to the Docs or [oceanroleplay/discordx-templates](https://github.com/oceanroleplay/discordx-templates) for examples.
+Please refer to the documentation or [DiscordX Templates](https://github.com/oceanroleplay/discordx-templates) for examples.
 
-**Important commands**<br>
-`npm run build` – compile with TSC<br>
-`npm run serve` – serve the compiled code<br>
-`npm run start` – run nodemon with the uncompiled code for cevelopment<br>
+
+## ⚙️ Usage
+`npm run build` – Build a JS-Bundle with the TypeScript compiler<br>
+`npm run serve` – Run the application in production mode<br>
+`npm run start` – Run the application in development mode via Nodemon<br>
 
 For development please use your own App-Instance. You can create one in [Discord's Developer Portal](https://discord.com/developers/applications).
 
-&nbsp;
 
 ## 💝 Thanks to
 
