@@ -14,6 +14,8 @@
 	"private": true,
 	"main": "build/main.js",
 	"scripts": {
+		"prepare": "husky install",
+		"lint": "tslint -p ./tsconfig.json",
 		"build": "tsc",
 		"build:changelog": "npx @discordx/changelog --root=src",
 		"dev": "node --loader ts-node/esm/transpile-only src/main.ts",
@@ -29,9 +31,13 @@
 		"reflect-metadata": "^0.1.13"
 	},
 	"devDependencies": {
+		"@commitlint/cli": "^17.0.3",
+		"@commitlint/config-conventional": "^17.0.3",
 		"@types/node": "^17.0.33",
+		"husky": "^8.0.1",
 		"nodemon": "^2.0.16",
 		"ts-node": "^10.7.0",
+		"tslint": "^6.1.3",
 		"typescript": "^4.6.4"
 	},
 	"engines": {
@@ -39,7 +45,7 @@
 		"npm": ">=7.0.0"
 	},
 	"repository": {
-	"type": "git",
+		"type": "git",
 		"url": "git+https://github.com/catppuccin/discord-bot.git"
 	},
 	"bugs": {
