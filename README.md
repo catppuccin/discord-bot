@@ -12,13 +12,17 @@
 </p>
 
 
-Based on [DiscordX](https://github.com/oceanroleplay/discord.ts) for typescript support with [Discord.js](https://github.com/discordjs/discord.js) as the underlying architechture.
-Please refer to the Docs or [oceanroleplay/discordx-templates](https://github.com/oceanroleplay/discordx-templates) for examples.
+<h3 align="center">
+	Based on <a href="https://github.com/oceanroleplay/discord.ts">DiscordX</a> for Typescript support with <a href="https://github.com/discordjs/discord.js">Discord.js</a> as the underlying architechture.
+	Please refer to the documentation or <a href="github.com/oceanroleplay/discordx-templates">DiscordX Templates</a> for examples.
+</h3>
 
-**Important commands**<br>
-`npm run build` – compile with TSC<br>
-`npm run serve` – serve the compiled code<br>
-`npm run start` – run nodemon with the uncompiled code for cevelopment<br>
+-----
+
+## ⚙️ Usage
+- `npm run build` – ___Transpile with Typescript___
+- `npm run serve` – ___Serve the transpiled code___
+- `npm run start` – ___Run nodemon with the non-transpiled code for development___
 
 For development please use your own App-Instance. You can create one in [Discord's Developer Portal](https://discord.com/developers/applications).
 
