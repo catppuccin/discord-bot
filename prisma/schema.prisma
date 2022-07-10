@@ -11,9 +11,9 @@ datasource db {
 }
 
 model Channel {
-  id           Int       @id
-  cid          Int       @default(0)
-  hthresh      Int
+  id           Int       @id @default(autoincrement())
+  cid          String    @default(uuid()) @unique
+  hthresh      Int       @default(10)
   horni        Boolean   @default(true)
   autothread   Boolean   @default(false)
 }
