@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE "Channel" ALTER COLUMN "cid" SET DEFAULT '0',
+ALTER COLUMN "cid" SET DATA TYPE TEXT;
