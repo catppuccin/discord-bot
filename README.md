@@ -15,6 +15,8 @@
 
 ## About
 
+#### [📃 Check out our todo list here!](https://github.com/catppuccin/discord-bot/projects/1)
+
 Based on [DiscordX](https://github.com/oceanroleplay/discord.ts) for typescript support with [Discord.js](https://github.com/discordjs/discord.js) as the underlying architechture.
 Please refer to the documentation or [DiscordX Templates](https://github.com/oceanroleplay/discordx-templates) for examples.
 
