@@ -17,7 +17,7 @@
 		"prepare": "husky install",
 		"prettier": "prettier --write .",
 		"tslint": "tslint -p ./tsconfig.json",
-		"build": "prettier --write .; tslint -p ./tsconfig.json; tsc",
+		"build": "prettier --write . && tslint -p ./tsconfig.json && tsc",
 		"build:changelog": "npx @discordx/changelog --root=src",
 		"dev": "node --loader ts-node/esm/transpile-only src/main.ts",
 		"serve": "node build/main.js",

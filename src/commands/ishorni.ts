@@ -10,6 +10,7 @@ import { Interface } from "../db.ts"
 const prisma = new PrismaClient()
 const face = new Interface(prisma)
 
+
 /*  isHorni COMMAND
  *  Description: Tells you if the current channel is horni.
  */

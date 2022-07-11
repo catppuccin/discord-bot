@@ -12,6 +12,7 @@ import { Interface } from "./db.ts";
 
 const prisma = new PrismaClient()
 
+
 export const bot = new Client({
 	botGuilds: [(client) => client.guilds.cache.map((guild) => guild.id)],
 
@@ -52,3 +53,4 @@ async function run() {
 var face = new Interface(prisma)
 console.log(await face.getChannels())
 run()
+
