@@ -1,10 +1,11 @@
 import { PrismaClient } from "@prisma/client";
 
 // type for these things
-type dbhorne = {
+type dbres = {
+	id: number;
+	cid: string;
+	hthresh: number;
 	horni: boolean;
-};
-type dbthread = {
 	autothread: boolean;
 };
 export class Interface {
@@ -19,7 +20,7 @@ export class Interface {
 		return channels;
 	}
 	private async channelExists(query: string): Promise<boolean> {
-		const result: object | null = await this.prisma.channel.findUnique({
+		const result: dbres | null = await this.prisma.channel.findUnique({
 			where: {
 				cid: query,
 			},
@@ -27,12 +28,9 @@ export class Interface {
 		return result ? true : false;
 	}
 	async isHorni(query: string): Promise<boolean> {
-		const horne: dbhorne | null = await this.prisma.channel.findUnique({
+		const horne: dbres | null = await this.prisma.channel.findUnique({
 			where: {
 				cid: query,
-			},
-			select: {
-				horni: true,
 			},
 		});
 		return horne ? horne.horni : true;
@@ -52,12 +50,9 @@ export class Interface {
 		});
 	}
 	async isAutoThread(query: string): Promise<boolean> {
-		const athread: dbthread | null = await this.prisma.channel.findUnique({
+		const athread: dbres | null = await this.prisma.channel.findUnique({
 			where: {
 				cid: query,
-			},
-			select: {
-				autothread: true,
 			},
 		});
 		return athread ? athread.autothread : true;
