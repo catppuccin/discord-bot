@@ -4,6 +4,7 @@ import { PrismaClient } from "@prisma/client";
 
 // @ts-ignore-error
 import { errorHandler } from "../utils/error_handler.ts";
+// @ts-ignore-error
 import { Interface } from "../db.ts";
 
 const prisma = new PrismaClient();
