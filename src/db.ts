@@ -1,63 +1,69 @@
 export class Interface {
-	prisma:PrismaClient;
+	prisma: PrismaClient;
 
-	constructor(prisma:PrismaClient) {
-		this.prisma = prisma
+	constructor(prisma: PrismaClient) {
+		this.prisma = prisma;
 	}
 
-	async getChannels():Promise<array> {
-		const channels = await this.prisma.channel.findMany()
-		return channels
+	async getChannels(): Promise<array> {
+		const channels = await this.prisma.channel.findMany();
+		return channels;
 	}
-	private async channelExists(query:string):Promise<boolean> {
+	private async channelExists(query: string): Promise<boolean> {
 		const result: object | null = await this.prisma.channel.findMany({
 			where: {
 				cid: {
 					equals: query,
-				}
+				},
 			},
 			select: {
 				horni: true,
-			}
-		})
-		return result
+			},
+		});
+		return result;
 	}
-	async isHorni(query:string):Promise<boolean> {
-		const result = this.channelExists(query)
+	async isHorni(query: string): Promise<boolean> {
+		const result = this.channelExists(query);
 		if (result) {
-			return result.horni
+			return result.horni;
 		} else {
-			return true //default result
+			return true; // default result
 		}
 	}
-	async setHorni(channel:string, horni:boolean) {
+	async setHorni(channel: string, horni: boolean) {
 		await this.prisma.channel.upsert({
 			where: {
 				cid: channel,
 			},
 			update: {
-				horni: horni,
+				horni
 			},
 			create: {
 				cid: channel,
-				horni: horni,
-			}
-		})
+				horni
+			},
+		});
 	}
-	async isAutoThread(query:string):Promise<boolean> {
-		const result = this.channelExists(query)
+	async isAutoThread(query: string): Promise<boolean> {
+		const result = this.channelExists(query);
 		if (result) {
-			return result.autothread
+			return result.autothread;
 		} else {
-			return false //default result
+			return false; //default result
 		}
 	}
-	async setAutoThread(channel:string, autothread:boolean) {
+	async setAutoThread(channel: string, autothread: boolean) {
 		await this.prisma.channel.upsert({
-			data: {
+			where: {
 				cid: channel,
-				autothread: autothread,
-			}
-		})
+			},
+			update: {
+				autothread
+			},
+			create: {
+				cid: channel,
+				autothread
+			},
+		});
 	}
 }
