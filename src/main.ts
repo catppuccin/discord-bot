@@ -53,4 +53,3 @@ async function run() {
 var face = new Interface(prisma)
 console.log(await face.getChannels())
 run()
-

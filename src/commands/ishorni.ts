@@ -15,6 +15,7 @@ const face = new Interface(prisma)
  *  Description: Tells you if the current channel is horni.
  */
 
+
  @Discord()
  @SlashGroup({ name: "channel" })
  export class ChannelCommands {
