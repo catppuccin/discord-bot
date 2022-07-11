@@ -16,19 +16,20 @@ export class Interface {
 			where: {
 				cid: query,
 			},
-			select: {
-				horni: true,
-			},
 		});
 		return result ? true : false;
 	}
 	async isHorni(query: string): Promise<boolean> {
-		const result = this.channelExists(query);
-		if (result) {
-			return result;
-		} else {
-			return true; // default result
-		}
+		const horne: object | null = await this.prisma.channel.findUnique({
+			where: {
+				cid: query,
+			},
+			select: {
+				horni: true,
+			},
+		});
+		// @ts-ignore-error
+		return horne ? horne.horni : true;
 	}
 	async setHorni(channel: string, horni: boolean) {
 		await this.prisma.channel.upsert({
@@ -45,12 +46,16 @@ export class Interface {
 		});
 	}
 	async isAutoThread(query: string): Promise<boolean> {
-		const result = this.channelExists(query);
-		if (result) {
-			return result;
-		} else {
-			return false; // default result
-		}
+		const athread: object | null = await this.prisma.channel.findUnique({
+			where: {
+				cid: query,
+			},
+			select: {
+				autothread: true,
+			},
+		});
+		// @ts-ignore-error
+		return athread ? athread.autothread : true;
 	}
 	async setAutoThread(channel: string, autothread: boolean) {
 		await this.prisma.channel.upsert({
