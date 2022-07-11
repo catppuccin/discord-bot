@@ -49,7 +49,7 @@ export class Interface {
 		if (result) {
 			return result.autothread;
 		} else {
-			return false; //default result
+			return false; // default result
 		}
 	}
 	async setAutoThread(channel: string, autothread: boolean) {
