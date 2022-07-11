@@ -30,6 +30,7 @@
 	"dependencies": {
 		"@discordx/importer": "^1.1.9",
 		"@discordx/pagination": "^2.1.2",
+		"@octokit/rest": "^19.0.3",
 		"@prisma/client": "^4.0.0",
 		"discord-api-types": "^0.30.0",
 		"discord.js": "^13.7.0",
