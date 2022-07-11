@@ -1,74 +1,63 @@
-import { PrismaClient } from "@prisma/client";
-
-// type for these things
-type dbres = {
-	id: number;
-	cid: string;
-	hthresh: number;
-	horni: boolean;
-	autothread: boolean;
-};
 export class Interface {
-	prisma: PrismaClient;
+	prisma:PrismaClient;
 
-	constructor(prisma: PrismaClient) {
-		this.prisma = prisma;
+	constructor(prisma:PrismaClient) {
+		this.prisma = prisma
 	}
 
-	async getChannels(): Promise<object[]> {
-		const channels = await this.prisma.channel.findMany();
-		return channels;
+	async getChannels():Promise<array> {
+		const channels = await this.prisma.channel.findMany()
+		return channels
 	}
-	private async channelExists(query: string): Promise<boolean> {
-		const result: dbres | null = await this.prisma.channel.findUnique({
+	private async channelExists(query:string):Promise<boolean> {
+		const result: object | null = await this.prisma.channel.findMany({
 			where: {
-				cid: query,
+				cid: {
+					equals: query,
+				}
 			},
-		});
-		return result ? true : false;
+			select: {
+				horni: true,
+			}
+		})
+		return result
 	}
-	async isHorni(query: string): Promise<boolean> {
-		const horne: dbres | null = await this.prisma.channel.findUnique({
-			where: {
-				cid: query,
-			},
-		});
-		return horne ? horne.horni : true;
+	async isHorni(query:string):Promise<boolean> {
+		const result = this.channelExists(query)
+		if (result) {
+			return result.horni
+		} else {
+			return true //default result
+		}
 	}
-	async setHorni(channel: string, horni: boolean) {
+	async setHorni(channel:string, horni:boolean) {
 		await this.prisma.channel.upsert({
 			where: {
 				cid: channel,
 			},
 			update: {
-				horni,
+				horni: horni,
 			},
 			create: {
 				cid: channel,
-				horni,
-			},
-		});
+				horni: horni,
+			}
+		})
 	}
-	async isAutoThread(query: string): Promise<boolean> {
-		const athread: dbres | null = await this.prisma.channel.findUnique({
-			where: {
-				cid: query,
-			},
-		});
-		return athread ? athread.autothread : true;
+	async isAutoThread(query:string):Promise<boolean> {
+		const result = this.channelExists(query)
+		if (result) {
+			return result.autothread
+		} else {
+			return false //default result
+		}
 	}
-	async setAutoThread(channel: string, autothread: boolean) {
+	async setAutoThread(channel:string, autothread:boolean) {
 		await this.prisma.channel.upsert({
-			where: {
+			data: {
 				cid: channel,
-			},
-			update: {
-				autothread,
-			},
-			create: {
-				cid: channel,
-				autothread,
-			},
-		});
+				autothread: autothread,
+			}
+		})
 	}
 }
