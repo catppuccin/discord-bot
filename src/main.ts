@@ -4,13 +4,14 @@ import { dirname, importx } from "@discordx/importer";
 import { Interaction, Message } from "discord.js";
 import { Intents } from "discord.js";
 import { Client } from "discordx";
-import { PrismaClient } from '@prisma/client'
+import { PrismaClient } from "@prisma/client";
 
 // @ts-ignore-error
 import { token } from "../bot_config.js";
+// @ts-ignore-error
 import { Interface } from "./db.ts";
 
-const prisma = new PrismaClient()
+const prisma = new PrismaClient();
 
 export const bot = new Client({
 	botGuilds: [(client) => client.guilds.cache.map((guild) => guild.id)],
@@ -49,6 +50,6 @@ async function run() {
 }
 
 // Testing the interface
-var face = new Interface(prisma)
-console.log(await face.getChannels())
-run()
+const face = new Interface(prisma);
+console.log(await face.getChannels());
+run();
