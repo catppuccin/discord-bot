@@ -23,6 +23,6 @@ export class ChannelCommands {
 		@SlashOption("repo") repo: string,
 		interaction: CommandInteraction
 	): Promise<void> {
-		// Send an API request to search the repos.
+		interaction.reply("Searching...");
 	}
 }
