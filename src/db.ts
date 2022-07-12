@@ -6,6 +6,7 @@ type dbres = {
 	hthresh: number;
 	horni: boolean;
 	autothread: boolean;
+	pinpermissions: array;
 };
 export class Interface {
 	prisma: PrismaClient;
@@ -69,5 +70,27 @@ export class Interface {
 				autothread,
 			},
 		});
+	}
+	async setPinPerms(channel: string, users: array) {
+		await this.prisma.channel.upsert({
+			where: {
+				cid: channel,
+			},
+			update: {
+				users,
+			},
+			create: {
+				cid: channel,
+				users,
+			},
+		})
+	}
+	async getPinPerms(query: string): Promise<array> {
+		const pinperms: dbres | null = await this.prisma.channel.findUnique({
+			where: {
+				cid: query,
+			},
+		})
+		return pinperms.pinpermissions;
 	}
 }
