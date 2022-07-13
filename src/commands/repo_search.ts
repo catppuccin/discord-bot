@@ -1,16 +1,10 @@
 import { CommandInteraction } from "discord.js";
 import { Discord, Slash, SlashGroup, SlashOption } from "discordx";
-import { PrismaClient } from "@prisma/client";
 import Fuse from "fuse.js";
 import { Octokit } from "@octokit/rest";
 import dotenv from "dotenv";
 
-// @ts-ignore-error
-import { Interface } from "../db.ts";
-
 dotenv.config();
-const prisma = new PrismaClient();
-const face = new Interface(prisma);
 const octokit = new Octokit({
 	auth: process.env.GH_TOKEN,
 });
@@ -38,6 +32,15 @@ export class ChannelCommands {
 				keys: ["name", "full_name"],
 			};
 			const fuse = new Fuse(repos, options);
+			const res = fuse.search(repo)[0];
+			console.log(res);
+			try {
+				interaction.editReply({
+					content: `Found result: ${res.item.html_url}`,
+				});
+			} catch {
+				interaction.editReply({ content: "No results were found." });
+			}
 		});
 	}
 }
