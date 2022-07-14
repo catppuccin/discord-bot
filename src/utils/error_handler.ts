@@ -1,6 +1,5 @@
 import { TextChannel } from "discord.js";
 
-// @ts-ignore-error
 import { logChannel, errorMessage } from "../../bot_config.js";
 
 export function errorHandler(source: any, error: any): string {

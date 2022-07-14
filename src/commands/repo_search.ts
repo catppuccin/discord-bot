@@ -5,8 +5,7 @@ import Fuse from "fuse.js";
 import { Octokit } from "@octokit/rest";
 import dotenv from "dotenv";
 
-// @ts-ignore-error
-import { Interface } from "../db.ts";
+import { Interface } from "../db";
 
 dotenv.config();
 const prisma = new PrismaClient();

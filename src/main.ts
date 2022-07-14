@@ -6,10 +6,8 @@ import { Intents } from "discord.js";
 import { Client } from "discordx";
 import { PrismaClient } from "@prisma/client";
 
-// @ts-ignore-error
 import { token } from "../bot_config.js";
-// @ts-ignore-error
-import { Interface } from "./db.ts";
+import { Interface } from "./db";
 
 const prisma = new PrismaClient();
 
