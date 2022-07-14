@@ -1,11 +1,12 @@
 # files
-.vscode
 .env
 .env.local
-package-lock.json
-yarn.lock
+.env.prod
 bot_config.js
+.tasks
 
 # folders
-build
-node_modules
+.idea/
+.vscode/
+build/
+node_modules/
