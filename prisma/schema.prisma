@@ -1,0 +1,19 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Channel {
+  id           Int       @id @default(autoincrement())
+  cid          String    @default(uuid()) @unique
+  hthresh      Int       @default(10)
+  horni        Boolean   @default(true)
+  autothread   Boolean   @default(false)
+}
