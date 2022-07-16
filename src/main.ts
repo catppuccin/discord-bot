@@ -5,13 +5,13 @@ import { Interaction, Message } from "discord.js";
 import { Intents } from "discord.js";
 import { Client } from "discordx";
 import { PrismaClient } from "@prisma/client";
+import dotenv from "dotenv";
 
-// @ts-ignore-error
-import { token } from "../bot_config.js";
-// @ts-ignore-error
-import { Interface } from "./db.ts";
+import { Interface } from "./db.js";
 
+dotenv.config();
 const prisma = new PrismaClient();
+const token = process.env.BOT_TOKEN;
 
 export const bot = new Client({
 	botGuilds: [(client) => client.guilds.cache.map((guild) => guild.id)],
@@ -46,7 +46,7 @@ bot.on("messageCreate", (message: Message) => {
 
 async function run() {
 	await importx(dirname(import.meta.url) + "/{events,commands}/**/*.{ts,js}");
-	await bot.login(token);
+	await bot.login(token as string);
 }
 
 // Testing the interface
