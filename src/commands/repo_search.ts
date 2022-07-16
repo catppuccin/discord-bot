@@ -41,7 +41,7 @@ export class ChannelCommands {
 					.addFields(
 						{
 							name: "Repo",
-							value: `[${res.item.full_name}](${res.item.html_url})` as string,
+							value: `[${res.item.full_name}](${res.item.html_url}#readme)` as string,
 							inline: true,
 						},
 						{
