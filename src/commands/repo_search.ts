@@ -1,4 +1,4 @@
-import { CommandInteraction } from "discord.js";
+import { CommandInteraction, MessageEmbed } from "discord.js";
 import { Discord, Slash, SlashGroup, SlashOption } from "discordx";
 import Fuse from "fuse.js";
 import { Octokit } from "@octokit/rest";
@@ -34,11 +34,33 @@ export class ChannelCommands {
 			const fuse = new Fuse(repos, options);
 			const res = fuse.search(repo)[0];
 			console.log(res);
-			try {
+			if (res instanceof Object) {
+				// Result found, log it.
+				const resultEmbed = new MessageEmbed()
+					.setTitle("Results")
+					.addFields(
+						{
+							name: "Repo",
+							value: `[${res.item.full_name}](${res.item.html_url})` as string,
+							inline: true,
+						},
+						{
+							name: "Issues",
+							value: `${res.item.open_issues_count}`,
+							inline: true,
+						},
+						{
+							name: "Stars",
+							value: `${res.item.watchers_count}`,
+							inline: true,
+						}
+					);
 				interaction.editReply({
-					content: `Found result: ${res.item.html_url}`,
+					content: `Found repo matching **${repo}**`,
+					embeds: [resultEmbed],
 				});
-			} catch {
+			} else {
+				// Result not found, notify user.
 				interaction.editReply({ content: "No results were found." });
 			}
 		});
