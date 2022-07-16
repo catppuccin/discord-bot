@@ -17,7 +17,7 @@
 
 #### [📃 Check out our todo list here!](https://github.com/catppuccin/discord-bot/projects/1)
 
-Based on [DiscordX](https://github.com/oceanroleplay/discord.ts) for typescript support with [Discord.js](https://github.com/discordjs/discord.js) as the underlying architechture.
+Based on [DiscordX](https://github.com/oceanroleplay/discord.ts) for typescript support with [Discord.js](https://github.com/discordjs/discord.js) as the underlying architecture.
 Please refer to the documentation or [DiscordX Templates](https://github.com/oceanroleplay/discordx-templates) for examples.
 
 ## ⚙️ Usage
@@ -26,7 +26,7 @@ Please refer to the documentation or [DiscordX Templates](https://github.com/oce
 `npm run serve` – Run the application in production mode<br>
 `npm run start` – Run the application in development mode via Nodemon<br>
 
-For development please use your own App-Instance. You can create one in [Discord's Developer Portal](https://discord.com/developers/applications).
+For development please use your own App-Instance. You can create one in [Discord's Developer Portal](https://discord.com/developers/applications). You will also need to setup a [Postgresql](https://www.postgresql.org) server. The URL should be stored in a `DATABASE_URL` environment variable.
 
 ## 💝 Thanks to
 
