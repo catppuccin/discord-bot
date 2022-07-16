@@ -1,11 +1,8 @@
 import { CommandInteraction } from "discord.js";
-import { Discord, Slash, SlashGroup, SlashOption } from "discordx";
+import { Discord, Slash, SlashGroup } from "discordx";
 import { PrismaClient } from "@prisma/client";
 
-// @ts-ignore-error
-import { errorHandler } from "../utils/error_handler.ts";
-// @ts-ignore-error
-import { Interface } from "../db.ts";
+import { Interface } from "../db.js";
 
 const prisma = new PrismaClient();
 const face = new Interface(prisma);
