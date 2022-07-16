@@ -5,6 +5,7 @@ import { Interaction, Message } from "discord.js";
 import { Intents } from "discord.js";
 import { Client } from "discordx";
 import { PrismaClient } from "@prisma/client";
+
 import dotenv from "dotenv";
 
 import { Interface } from "./db.js";
